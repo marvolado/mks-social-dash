@@ -1,0 +1,53 @@
+/* Import base font family */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Color variables for light theme */
+html {
+  --background: hsl(0, 0%, 100%) no-repeat;
+  --background: linear-gradient(180deg, hsl(225, 100%, 98%) 0, hsl(225, 100%, 98%) 240px, hsl(0, 0%, 100%) 240px) no-repeat;
+  --primary-color: hsl(230, 17%, 14%);
+  --secondary-color: hsl(228, 12%, 44%);
+  height: 100%;
+}
+
+/* Color variables for dark theme */
+html[data-theme="dark"] {
+  --background: rgb(30, 32, 42) no-repeat;
+  --background: linear-gradient(180deg, hsl(232, 19%, 15%) 0, hsl(232, 19%, 15%) 240px, hsl(230, 17%, 14%) 240px)  no-repeat;
+  --primary-color: hsl(0, 0%, 100%);
+  --secondary-color: #8b97c6;
+}
+
+/* resets*/
+* {
+  box-sizing: border-box;
+ }
+body, h1, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* General styles */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--primary-color);
+  background: var(--background);
+  background-color: var(--background-color);
+  margin: 40px 12%;
+
+}
+header {
+  display: flex;
+  flex-direction: row;
+}
+header div {
+  flex: 1;
+}
+.header .dm-toggle-wrap {
+  align-items: flex-end;
+}
+header h3 {
+  color: var(--secondary-color);
+}
