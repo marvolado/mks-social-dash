@@ -22,24 +22,96 @@ const App = () => {
       setChecked(false);
     }
   };
+
+  const openModal = () => {
+
+  };
+
   return (
     <div className="App">
-      <header>
-        <div>
-          <h1>Social Media Dashboard</h1>
-          <h3>Total Followers: 23,004</h3>
-        </div>
-        <div className="dm-toggle-wrap">
-          <p>Dark Mode</p>
-          <label>
-            <input
-              type="checkbox"
-              defaultChecked={checked}
-              onChange={() => toggleThemeChange()}
-            />
-          </label>
-        </div>
-      </header>
+      <div className="container">
+        <header>
+          <div className="title-wrap">
+            <h1>Social Media Dashboard</h1>
+            <h3>Total Followers: 23,004</h3>
+          </div>
+          <div className="toggle-wrap">
+            <label>
+              <input
+                type="checkbox"
+                defaultChecked={checked}
+                onChange={() => toggleThemeChange()}
+              /> Dark Mode
+            </label>
+          </div>
+        </header>
+        <main>
+
+          <div className="big-cards">
+            <div className="card facebook">
+              <a onClick={() => { openModal() }}><i className="icon fb"></i> @nathanf</a>
+              <h4>1987</h4>
+              <p>FOLLOWERS</p>
+              <span className="up">12 Today</span>
+            </div>
+            <div className="card twitter">
+              <a onClick={() => { openModal() }}><i className="icon tw"></i>@nathanf</a>
+              <h4>1044</h4>
+              <p>FOLLOWERS</p>
+              <span className="up">12 Today</span>
+            </div>
+            <div className="card instagram">
+              <a onClick={() => { openModal() }}><i className="icon ig"></i>@nathanf</a>
+              <h4>11k</h4>
+              <p>FOLLOWERS</p>
+              <span className="up">12 Today</span>
+            </div>
+            <div className="card youtube">
+              <a onClick={() => { openModal() }}><i className="icon yt"></i>@nathanf</a>
+              <h4>8239</h4>
+              <p>FOLLOWERS</p>
+              <span className="up">12 Today</span>
+            </div>
+          </div>
+
+          <h2>Overview - Today</h2>
+          <div className="overview-cards">
+            <div className="card">
+              <p>Page Views <i className="icon fb"></i></p>
+              <h5><strong>87</strong><span className="up"></span></h5>
+            </div>
+            <div className="card">
+              <p>Likes <i className="icon fb"></i></p>
+              <h5><strong>87</strong><span className="up"></span></h5>
+            </div>
+            <div className="card">
+              <p>Likes <i className="icon ig"></i></p>
+              <h5><strong>87</strong><span className="up"></span></h5>
+            </div>
+            <div className="card">
+              <p>Profile Views <i className="icon ig"></i></p>
+              <h5><strong>87</strong><span className="up"></span></h5>
+            </div>
+            <div className="card">
+              <p>Retweets <i className="icon tw"></i></p>
+              <h5><strong>87</strong><span className="up"></span></h5>
+            </div>
+            <div className="card">
+              <p>Likes <i className="icon tw"></i></p>
+              <h5><strong>87</strong><span className="up"></span></h5>
+            </div>
+            <div className="card">
+              <p>Likes <i className="icon yt"></i></p>
+              <h5><strong>87</strong><span className="up"></span></h5>
+            </div>
+            <div className="card">
+              <p>Total Views <i className="icon yt"></i></p>
+              <h5><strong>87</strong><span className="up"></span></h5>
+            </div>
+          </div>
+
+        </main>
+      </div>
     </div>
   );
 }

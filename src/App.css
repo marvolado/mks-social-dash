@@ -7,7 +7,13 @@ html {
   --background: linear-gradient(180deg, hsl(225, 100%, 98%) 0, hsl(225, 100%, 98%) 240px, hsl(0, 0%, 100%) 240px) no-repeat;
   --primary-color: hsl(230, 17%, 14%);
   --secondary-color: hsl(228, 12%, 44%);
-  height: 100%;
+  --card-bg: hsl(227, 47%, 96%);
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(195, 100%, 50%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
+  --youtube: hsl(348, 97%, 39%);
 }
 
 /* Color variables for dark theme */
@@ -16,38 +22,155 @@ html[data-theme="dark"] {
   --background: linear-gradient(180deg, hsl(232, 19%, 15%) 0, hsl(232, 19%, 15%) 240px, hsl(230, 17%, 14%) 240px)  no-repeat;
   --primary-color: hsl(0, 0%, 100%);
   --secondary-color: #8b97c6;
+  --card-bg: hsl(228, 28%, 20%);
 }
 
 /* resets*/
 * {
   box-sizing: border-box;
  }
-body, h1, h3, p {
+body, h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;
 }
+html, body, #root, .App, .container {
+  display: flex;
+  flex: 1;
+}
+/* Media queries */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    margin: 0 2%;
+  }
+  .container .overview-cards,
+  .container .big-cards {
+    margin: 0 0 50px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    margin: 0 4%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    margin: 0 5%;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
 
 
 /* General styles */
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: var(--primary-color);
   background: var(--background);
   background-color: var(--background-color);
-  margin: 40px 12%;
+  margin: 40px 0;
 
 }
-header {
+.container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
-header div {
+.container header {
+  display: flex;
   flex: 1;
 }
-.header .dm-toggle-wrap {
-  align-items: flex-end;
+.container header .title-wrap {
+  flex: 2;
+  align-items: center;
+  flex-direction: column;
 }
-header h3 {
+.container header .title-wrap h1 {
+  font-size: 1.7em;
+  margin-bottom: 2px;
+  font-weight: 400;
+}
+.container header .title-wrap h2 {
   color: var(--secondary-color);
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.container header .title-wrap h3 {
+  color: var(--secondary-color);
+  font-size: 0.9em;
+  font-weight: 400;
+}
+.container header .toggle-wrap {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+/*              */
+/* Main content */
+/*              */
+.container main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 50px;
+}
+.container main .big-cards,
+.container main .overview-cards {
+  margin: 0 -12px 50px;
+  display: flex;
+}
+
+/* Base card styles */
+.container main .card {
+  --gap: 12px;
+  background: var(--card-bg);
+  color: var(--secondary-color);
+  padding: 25px 15px;
+  border-radius: 5px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--gap);
+}
+.container main .card a {
+  font-size: 0.8em;
+  display: flex;
+  flex: 1;
+}
+.container main .card h4 {
+  font-size: 2.2em;
+  color: var(--primary-color);
+  display: flex;
+  flex: 1;
+}
+.container main .card p {
+  font-size: 0.9em;
+  color: var(--secondary-color);
+  display: flex;
+  flex: 1;
+}
+.container main .big-cards .card p {
+  letter-spacing: 0.5em;
+}
+.container main .card span {
+  font-size: 0.8em;
+  color: var(--primary-color);
+  padding: 25px 15px;
+  font-weight: 700;
+  display: flex;
+  flex: 1;
+}
+.container main .card .up {
+  color: var(--lime-green);
+}
+.container main .card .down {
+  color: var(--bright-red);
 }
