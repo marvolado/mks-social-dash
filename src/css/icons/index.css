@@ -1,0 +1,94 @@
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+  /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+  /*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'fontello';
+      src: url('../font/fontello.svg?20300270#fontello') format('svg');
+    }
+  }
+  */
+   
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+   
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+   
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+   
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+   
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+   
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+   
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+   
+.icon-facebook:before { content: '\e800' } /* '' */
+.icon-instagram:before { content: '\e801' } /* '' */
+.icon-twitter:before { content: '\e802' } /* '' */
+.icon-up:before { content: '\e803' } /* '' */
+.icon-youtube:before { content: '\e804' } /* '' */
+.icon-down:before { content: '\e805'} /* '' */
+
+
+/* Custom icons color and size definitions  */
+.ms-icon {
+    font-size: 1.4em;
+    line-height: 1.5em;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+}
+.ms-icon:before {
+    line-height: 1.4em;
+}
+.icon-up,
+.icon-down  {
+    font-size: 0.3em; 
+
+}
+/* Custom definition for Instagram gradient icon*/
+.icon-instagram:before { 
+    background: var(--instagram);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Base colors for icons */
+.icon-facebook:before { 
+    color: var(--facebook);
+}
+.icon-twitter:before { 
+    color: var(--twitter) ;
+}
+.icon-youtube:before { 
+    color: var(--bright-red);
+}
+.icon-up:before { 
+    color: var(--lime-green);
+}
+.icon-down:before { 
+    color: var(--salmon);
+}

@@ -1,0 +1,95 @@
+/* Base card styles */
+.container main .card {
+    --gap: 15px;
+    background: var(--card-bg);
+    color: var(--secondary-color);
+    padding: 25px 15px;
+    border-radius: 5px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--gap);
+  }
+  .container main .card:hover {
+    background: var(--card-bg-hover);
+    cursor: pointer;
+  }
+  .container main .card a {
+    font-size: 0.8em;
+    display: flex;
+    flex: 1;
+  }
+  .container main .card p {
+    font-size: 0.8em;
+    color: var(--secondary-color);
+    display: flex;
+    flex: 1;
+  }
+  .container main .card span {
+    font-size: 0.8em;
+    color: var(--primary-color);
+    margin-top: 30px;
+    font-weight: 700;
+    display: flex;
+    flex: 1;
+  }
+  .container main .card .up {
+    color: var(--lime-green);
+  }
+  .container main .card .down {
+    color: var(--salmon);
+  }
+  
+  /* Big cards specific */
+  .container main .big-cards .card {
+    position: relative;
+    /* background-clip: padding-box; */
+    border: solid 5px transparent;
+  }
+  /* Card top border hack */
+  .container main .big-cards .card.facebook::before {
+    background: var(--facebook);
+  }
+  .container main .big-cards .card.twitter::before {
+    background: var(--twitter);
+  }
+  .container main .big-cards .card.instagram::before {
+    background: var(--instagram) ;
+  }
+  .container main .big-cards .card.youtube::before {
+    background: var(--youtube);
+  }
+  .container main .big-cards .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    margin: -4px;
+    border-radius: 5px 5px 0 0;
+  }
+  .container main .big-cards .card {
+    border-radius: 5px;
+  }
+  .container main .big-cards .card p {
+    letter-spacing: 0.4em;
+  }
+  .container main .big-cards .card a {
+    margin: 10px 0 18px;
+    vertical-align: middle;
+  }
+  .container main .big-cards .card a em {
+    line-height: 1.4em;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+  }
+  .container main .big-cards .card h4 {
+    font-size: 3.4em;
+    color: var(--primary-color);
+    display: flex;
+    flex: 1;
+  }

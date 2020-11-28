@@ -1,0 +1,47 @@
+/* resets*/
+* {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+html, body, #root, .App, .container {
+    display: flex;
+    flex: 1;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--primary-color);
+    background: var(--background);
+    background-color: var(--background-color);
+    margin: 40px 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.container header {
+    display: flex;
+    flex: 1;
+  }
+.container header .title-wrap {
+    flex: 2;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 50px;
+}
+.container main .big-cards,
+.container main .overview-cards {
+    margin: 0 -12px 50px;
+    display: flex;
+    flex-wrap: wrap;
+}

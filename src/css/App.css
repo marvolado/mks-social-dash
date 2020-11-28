@@ -1,0 +1,21 @@
+/* Project Root
+ src
+  └─css              
+     ├─ App.css      // Current document
+     ├─ base         // Custom resets targeting used elements only
+     ├─ fonts        // Base font and icon fonts
+        └─ source    // Font source files
+     ├─ colors       // Color variables           
+     ├─ icons        // Fontello icons definition and custom settings
+     ├─ responsive   // Media queries
+     ├─ cards        // Card styles
+     └─ custom       // Custom styles created for the application 
+*/
+
+@import "./base/index.css";
+@import "./fonts/index.css";
+@import "./colors/index.css";
+@import "./icons/index.css";
+@import "./responsive/index.css";
+@import "./cards/index.css";
+@import "./custom/index.css";

@@ -1,0 +1,21 @@
+/* Import base font family */
+@font-face {
+     font-family: 'fontello';
+     src: url('./source/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+}
+
+/* Icons generated at Fontello */
+@font-face {
+     font-family: 'fontello';
+     src: url('./source/fontello.eot?20300270');
+     src: url('./source/fontello.eot?20300270#iefix') format('embedded-opentype'),
+          url('./source/fontello.woff2?20300270') format('woff2'),
+          url('./source/fontello.woff?20300270') format('woff'),
+          url('./source/fontello.ttf?20300270') format('truetype'),
+          url('./source/fontello.svg?20300270#fontello') format('svg');
+     font-weight: normal;
+     font-style: normal;
+}
+  
