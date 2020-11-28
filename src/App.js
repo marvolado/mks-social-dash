@@ -48,29 +48,45 @@ const App = () => {
         <main>
 
           <div className="big-cards">
+
             <div className="card facebook">
-              <a onClick={() => { openModal() }}><i className="icon fb"></i> @nathanf</a>
+              <a onClick={() => { openModal() }}>
+                <i className="ms-icon icon-facebook"></i>
+                <em>@nathanf</em>
+              </a>
               <h4>1987</h4>
               <p>FOLLOWERS</p>
-              <span className="up">12 Today</span>
+              <span className="up"><i className="ms-icon icon-up"></i> 12 Today</span>
             </div>
+
             <div className="card twitter">
-              <a onClick={() => { openModal() }}><i className="icon tw"></i>@nathanf</a>
+              <a onClick={() => { openModal() }}>
+                <i className="ms-icon icon-twitter"></i>
+                <em>@nathanf</em>
+              </a>
               <h4>1044</h4>
               <p>FOLLOWERS</p>
-              <span className="up">12 Today</span>
+              <span className="up"><i className="ms-icon icon-up"></i> 99 Today</span>
             </div>
+
             <div className="card instagram">
-              <a onClick={() => { openModal() }}><i className="icon ig"></i>@nathanf</a>
+              <a onClick={() => { openModal() }}>
+                <i className="ms-icon icon-instagram"></i>
+                <em>realnathanf</em>
+              </a>
               <h4>11k</h4>
               <p>FOLLOWERS</p>
-              <span className="up">12 Today</span>
+              <span className="up"><i className="ms-icon icon-up"></i> 1099 Today</span>
             </div>
+
             <div className="card youtube">
-              <a onClick={() => { openModal() }}><i className="icon yt"></i>@nathanf</a>
+              <a onClick={() => { openModal() }}>
+                <i className="ms-icon icon-youtube"></i>
+                <em>Nathan F.</em>
+              </a>
               <h4>8239</h4>
-              <p>FOLLOWERS</p>
-              <span className="up">12 Today</span>
+              <p>SUBSCRIBERS</p>
+              <span className="down"><i className="ms-icon icon-down"></i> 144 Today</span>
             </div>
           </div>
 

@@ -10,9 +10,11 @@ html {
   --card-bg: hsl(227, 47%, 96%);
   --lime-green: hsl(163, 72%, 41%);
   --bright-red: hsl(356, 69%, 56%);
-  --facebook: hsl(195, 100%, 50%);
+  --purple: hsl(243, 51%, 70%);
+  --salmon: hsl(349, 38%, 51%);
+  --facebook: hsl(195, 100%, 50%); 
   --twitter: hsl(203, 89%, 53%);
-  --instagram: linear-gradient(hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
+  --instagram: linear-gradient(45deg, rgba(253,196,104,1) 0%, rgba(223,73,150,1) 100%);
   --youtube: hsl(348, 97%, 39%);
 }
 
@@ -37,11 +39,78 @@ html, body, #root, .App, .container {
   display: flex;
   flex: 1;
 }
+
+/* Icons generated at Fontello */
+@font-face {
+  font-family: 'fontello';
+  src: url('./font/fontello.eot?20300270');
+  src: url('./font/fontello.eot?20300270#iefix') format('embedded-opentype'),
+       url('./font/fontello.woff2?20300270') format('woff2'),
+       url('./font/fontello.woff?20300270') format('woff'),
+       url('./font/fontello.ttf?20300270') format('truetype'),
+       url('./font/fontello.svg?20300270#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?20300270#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-facebook:before { content: '\e800' } /* '' */
+.icon-instagram:before { content: '\e801' } /* '' */
+.icon-twitter:before { content: '\e802' } /* '' */
+.icon-up:before { content: '\e803' } /* '' */
+.icon-youtube:before { content: '\e804' } /* '' */
+.icon-down:before { content: '\e805'} /* '' */
+
+
 /* Media queries */
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+@media (min-width: 320px) {
   .container {
-    margin: 0 2%;
+    margin: 0 5%;
   }
   .container .overview-cards,
   .container .big-cards {
@@ -51,19 +120,17 @@ html, body, #root, .App, .container {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .container {
-    margin: 0 4%;
-  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .container {
-    margin: 0 5%;
-  }
 }
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 12%;
+  }
+}
 
 
 /* General styles */
@@ -125,11 +192,12 @@ body {
 .container main .overview-cards {
   margin: 0 -12px 50px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* Base card styles */
 .container main .card {
-  --gap: 12px;
+  --gap: 15px;
   background: var(--card-bg);
   color: var(--secondary-color);
   padding: 25px 15px;
@@ -145,25 +213,16 @@ body {
   display: flex;
   flex: 1;
 }
-.container main .card h4 {
-  font-size: 2.2em;
-  color: var(--primary-color);
-  display: flex;
-  flex: 1;
-}
 .container main .card p {
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: var(--secondary-color);
   display: flex;
   flex: 1;
 }
-.container main .big-cards .card p {
-  letter-spacing: 0.5em;
-}
 .container main .card span {
   font-size: 0.8em;
   color: var(--primary-color);
-  padding: 25px 15px;
+  margin-top: 30px;
   font-weight: 700;
   display: flex;
   flex: 1;
@@ -172,5 +231,76 @@ body {
   color: var(--lime-green);
 }
 .container main .card .down {
-  color: var(--bright-red);
+  color: var(--salmon);
 }
+
+/* Big cards specific */
+.container main .big-cards .card {
+  position: relative;
+  /* background-clip: padding-box; */
+  border: solid 5px transparent;
+}
+/* Card top border hack */
+.container main .big-cards .card.facebook::before {
+  background: var(--facebook);
+}
+.container main .big-cards .card.twitter::before {
+  background: var(--twitter);
+}
+.container main .big-cards .card.instagram::before {
+  background: var(--instagram) ;
+}
+.container main .big-cards .card.youtube::before {
+  background: var(--youtube);
+}
+.container main .big-cards .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  margin: -4px;
+  border-radius: 5px 5px 0 0;
+}
+
+/**/
+
+.container main .big-cards .card {
+  border-radius: 5px;
+}
+.container main .big-cards .card p {
+  letter-spacing: 0.4em;
+}
+.container main .big-cards .card a {
+  margin: 10px 0 18px;
+  vertical-align: middle;
+}
+.container main .big-cards .card a em {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+.container main .big-cards .card h4 {
+  font-size: 3.4em;
+  color: var(--primary-color);
+  display: flex;
+  flex: 1;
+}
+
+/* Icons color definitions and size  */
+.container .ms-icon {font-size: 1.3em; margin-right: 5px}
+.container .icon-up,
+.container .icon-down  {
+  font-size: 0.3em; 
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+.container .icon-facebook:before { color: var(--facebook)}
+.container .icon-instagram:before { color: var(--instagram) }
+.container .icon-twitter:before { color: var(--twitter) }
+.container .icon-youtube:before { color: var(--bright-red) }
+.container .icon-up:before { color: var(--lime-green) }
+.container .icon-down:before { color: var(--salmon) }
