@@ -30,7 +30,7 @@ body {
 .container main {
     flex-direction: column;
     flex: 1;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .container main .big-cards,
 .container main .overview-cards {

@@ -85,7 +85,7 @@
     font-style: normal;
   }
   .container main .big-cards .card h4 {
-    font-size: 3.4em;
+    font-size: 4em;
     color: var(--primary-color);
     display: flex;
     flex: 1;
