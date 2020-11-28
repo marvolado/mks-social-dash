@@ -2,11 +2,11 @@
 * {
     box-sizing: border-box;
 }
-body, h1, h2, h3, h4, p {
+body, h1, h2, h3, h4, h5, p {
     margin: 0;
     padding: 0;
 }
-html, body, #root, .App, .container {
+html, body, div, header, section {
     display: flex;
     flex: 1;
 }
@@ -20,21 +20,14 @@ body {
     margin: 40px 0;
 }
 .container {
-    display: flex;
     flex-direction: column;
 }
-.container header {
-    display: flex;
-    flex: 1;
-  }
+
 .container header .title-wrap {
-    flex: 2;
-    align-items: center;
     flex-direction: column;
 }
 
 .container main {
-    display: flex;
     flex-direction: column;
     flex: 1;
     margin-top: 50px;
@@ -42,6 +35,5 @@ body {
 .container main .big-cards,
 .container main .overview-cards {
     margin: 0 -12px 50px;
-    display: flex;
     flex-wrap: wrap;
 }

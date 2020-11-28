@@ -2,20 +2,17 @@
 .container main .card {
     --gap: 15px;
     background: var(--card-bg);
-    color: var(--secondary-color);
-    padding: 25px 15px;
     border-radius: 5px;
     display: flex;
     flex: 1;
     flex-direction: column;
-    align-items: center;
     margin: var(--gap);
   }
   .container main .card:hover {
     background: var(--card-bg-hover);
     cursor: pointer;
   }
-  .container main .card a {
+  .container main .card small {
     font-size: 0.8em;
     display: flex;
     flex: 1;
@@ -27,12 +24,8 @@
     flex: 1;
   }
   .container main .card span {
-    font-size: 0.8em;
     color: var(--primary-color);
-    margin-top: 30px;
-    font-weight: 700;
-    display: flex;
-    flex: 1;
+    display: flex; 
   }
   .container main .card .up {
     color: var(--lime-green);
@@ -44,8 +37,10 @@
   /* Big cards specific */
   .container main .big-cards .card {
     position: relative;
-    /* background-clip: padding-box; */
+    align-items: center;
     border: solid 5px transparent;
+    color: var(--secondary-color);
+    padding: 25px 15px;
   }
   /* Card top border hack */
   .container main .big-cards .card.facebook::before {
@@ -71,17 +66,19 @@
     margin: -4px;
     border-radius: 5px 5px 0 0;
   }
-  .container main .big-cards .card {
-    border-radius: 5px;
+  .container main .big-cards .card span {
+    font-size: 0.8em;
+    margin-top: 30px;
+    font-weight: 700;
   }
   .container main .big-cards .card p {
     letter-spacing: 0.4em;
   }
-  .container main .big-cards .card a {
+  .container main .big-cards .card small {
     margin: 10px 0 18px;
     vertical-align: middle;
   }
-  .container main .big-cards .card a em {
+  .container main .big-cards .card small em {
     line-height: 1.4em;
     display: flex;
     align-items: center;
@@ -92,4 +89,41 @@
     color: var(--primary-color);
     display: flex;
     flex: 1;
+  }
+
+  /* Overview cards */
+  .overview-cards .card {
+    min-width: 20%;
+    padding: 25px 20px;
+  }
+  .overview-cards p,
+  .overview-cards h5 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .overview-cards h5 {
+    height: 60px;
+  }
+  .overview-cards p strong {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: var(--secondary-color);
+  }
+  .overview-cards p i {
+    margin-right: 0;
+  }
+  .overview-cards h5 strong {
+    font-size: 3em;
+    line-height: 0.8em;
+    font-weight: normal;
+    display: flex;
+    align-items: flex-end;
+  }
+  .overview-cards h5 span {
+    display: flex;
+    align-items: flex-end;
+  }
+  .overview-cards h5 span i {
+    padding-bottom: 3px;
   }
