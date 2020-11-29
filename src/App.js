@@ -92,7 +92,7 @@ const App = () => {
             <h2>Overview - Today</h2>
             <section className="overview-cards">
               {/* Facebook */}
-              <div className="card">
+              <div className="card" onClick={openModal}>
                 <p>
                   <strong>Page Views</strong>
                   <i className="ms-icon icon-facebook"></i>
@@ -105,7 +105,7 @@ const App = () => {
               </span>
                 </h5>
               </div>
-              <div className="card">
+              <div className="card" onClick={openModal}>
                 <p>
                   <strong>Likes</strong>
                   <i className="ms-icon icon-facebook"></i>
@@ -116,7 +116,7 @@ const App = () => {
                 </h5>
               </div>
               {/* Instagram */}
-              <div className="card">
+              <div className="card" onClick={openModal}>
                 <p>
                   <strong>Likes</strong>
                   <i className="ms-icon icon-instagram"></i>
@@ -126,7 +126,7 @@ const App = () => {
                   <span className="up"><i className="ms-icon icon-up"></i> 2257%</span>
                 </h5>
               </div>
-              <div className="card">
+              <div className="card" onClick={openModal}>
                 <p>
                   <strong>Profile Views</strong>
                   <i className="ms-icon icon-instagram"></i>
@@ -137,7 +137,7 @@ const App = () => {
                 </h5>
               </div>
               {/* Twitter */}
-              <div className="card">
+              <div className="card" onClick={openModal}>
                 <p>
                   <strong>Retweets</strong>
                   <i className="ms-icon icon-twitter"></i>
@@ -147,7 +147,7 @@ const App = () => {
                   <span className="up"><i className="ms-icon icon-up"></i> 303%</span>
                 </h5>
               </div>
-              <div className="card">
+              <div className="card" onClick={openModal}>
                 <p>
                   <strong>Likes</strong>
                   <i className="ms-icon icon-twitter"></i>
@@ -158,7 +158,7 @@ const App = () => {
                 </h5>
               </div>
               {/* Youtube */}
-              <div className="card">
+              <div className="card" onClick={openModal}>
                 <p>
                   <strong>Retweets</strong>
                   <i className="ms-icon icon-youtube"></i>
@@ -168,7 +168,7 @@ const App = () => {
                   <span className="down"><i className="ms-icon icon-down"></i> 19%</span>
                 </h5>
               </div>
-              <div className="card">
+              <div className="card" onClick={openModal}>
                 <p>
                   <strong>Likes</strong>
                   <i className="ms-icon icon-youtube"></i>
