@@ -1,0 +1,151 @@
+#react-simple-modal-container {
+    position: absolute;
+}
+.rsm-rounded-md {
+    border-radius:10px
+}
+.rsm-bg-white{
+    background: var(--card-bg-hover);
+}
+.rsm-bg-gray-200{
+    background-color:#edf2f7
+}
+.rsm-bg-gray-700{
+    background-color:black
+}
+.rsm-opacity-50{
+    opacity:.5
+}
+.rsm-flex{
+    display:flex
+}
+
+.rsm-flex-col{
+    flex-direction:column
+}
+.rsm-inset-0{
+    top:0;
+    right:0;
+    bottom:0;
+    left:0
+}
+.rsm-justify-center{
+    justify-content:center
+}
+.rsm-m-4{
+    margin:1rem
+}
+.rsm-max-h-full{
+    max-height:100%
+}
+
+.rsm-overflow-auto{
+    overflow:auto
+}
+.rsm-p-4{
+    padding:1rem
+}
+.rsm-fixed{
+    position:fixed
+}
+.rsm-w-full{
+    width:100%
+}
+.rsm-z-40{
+    z-index:40
+}
+.rsm-z-50{
+    z-index:50
+}
+
+.rsm-bg-white .close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    cursor: pointer;
+}
+
+@media (min-width:640px){
+    .sm\:rsm-m-8{
+        margin:6rem 12rem
+    }
+}
+@media (min-width:768px){
+    .md\:rsm-w-10\/12{
+        width:50%
+    }
+}
+@media (min-width:1280px){
+    .xl\:rsm-w-1\/2{
+        width:50%
+    }
+}
+/* .rsm-shadow-lg{
+    box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)
+} */
+
+.ms-custom-modal > div {
+    flex-direction: column;
+}
+.ms-custom-modal .title-wrap {
+    flex-direction: column;
+    flex: 0;
+    padding: 2.5em 3em 0;
+}
+
+.ms-custom-modal .title-wrap h3 {
+    flex-direction: row;
+    display: flex;
+    align-items: stretch;
+    margin-top: 0.4em;
+}
+.ms-custom-modal .title-wrap .ms-icon {
+    display: flex;
+    font-size: 1.1em;
+    margin-left: -0.2em;
+}
+.ms-custom-modal .title-wrap span {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    font-size: 0.85em;
+    line-height: 0.85em;
+}
+
+.ms-custom-modal .statistics {
+    flex: 0;
+    display: flex;
+    margin: 2em 3em 1em;
+    align-items: center;
+}
+.ms-custom-modal .statistics strong {
+    font-size: 3em;
+}
+.ms-custom-modal .statistics strong.lime {
+    color: var(--lime-green);
+}
+.ms-custom-modal .statistics strong.lime i {
+    display: inline-block;
+    vertical-align: super;
+    margin-right: 0;
+}
+.ms-custom-modal .statistics strong.lime .icon-up:before {
+    color: var(--lime-green);
+    font-size: 0.4em;
+}
+.ms-custom-modal .statistics span {
+    margin: 0 3em 0 1.2em;
+    font-size: 1.1em;
+}
+.ms-custom-modal .graph {
+    background: var(--card-bg)
+}
+.ms-custom-modal .graph .gutter {
+    padding: 1.5em 3em;
+}
+.ms-custom-modal .graph h5 {
+    color: var(--secondary-color);
+    font-size: 1.1em;
+    font-weight: 400;
+}
+

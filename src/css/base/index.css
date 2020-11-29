@@ -22,6 +22,9 @@ body {
 .container {
     flex-direction: column;
 }
+.container * {
+    transition: all 0.5s ease-out;
+}
 
 .container header .title-wrap {
     flex-direction: column;

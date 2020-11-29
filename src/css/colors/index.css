@@ -18,7 +18,6 @@ html {
   
   /* Color variables for dark theme */
   html[data-theme="dark"] {
-    --background: rgb(30, 32, 42) no-repeat;
     --background: linear-gradient(180deg, hsl(232, 19%, 15%) 0, hsl(232, 19%, 15%) 240px, hsl(230, 17%, 14%) 240px)  no-repeat;
     --primary-color: hsl(0, 0%, 100%);
     --secondary-color: #8b97c6;
