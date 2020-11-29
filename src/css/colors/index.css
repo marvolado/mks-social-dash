@@ -14,6 +14,7 @@ html {
     --twitter: hsl(203, 89%, 53%);
     --instagram: linear-gradient(45deg, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
     --youtube: hsl(348, 97%, 39%);
+    --toggle-bg: hsl(230, 22%, 74%);
   }
   
   /* Color variables for dark theme */
@@ -23,4 +24,5 @@ html {
     --secondary-color: #8b97c6;
     --card-bg: hsl(228, 28%, 20%);
     --card-bg-hover: hsl(228, 26%, 27%);
+    --toggle-bg: linear-gradient(90deg, hsl(210, 78%, 56%) 0, hsl(146, 68%, 55%) 100%);
   }

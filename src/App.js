@@ -36,13 +36,13 @@ const App = () => {
               <h3>Total Followers: 23,004</h3>
             </div>
             <div className="toggle-wrap">
-              <label>
-                <input
-                  type="checkbox"
+              Dark Mode <label className="switch">
+                <input type="checkbox"
                   defaultChecked={checked}
                   onChange={() => toggleThemeChange()}
-                /> Dark Mode
-          </label>
+                />
+                <span className="slider round"></span>
+              </label>
             </div>
           </header>
           <main>

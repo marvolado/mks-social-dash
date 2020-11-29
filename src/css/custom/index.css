@@ -1,21 +1,88 @@
-.container header .title-wrap h1 {
+.title-wrap h1 {
     font-size: 2em;
     margin-bottom: 2px;
     font-weight: 700;
 }
-.container header .title-wrap h2 {
+.title-wrap h2 {
     color: var(--secondary-color);
     font-size: 1.5em;
     font-weight: 400;
 }
-.container header .title-wrap h3 {
+.title-wrap h3,
+.toggle-wrap {
     color: var(--secondary-color);
     font-size: 1em;
     font-weight: 700;
 }
-.container header .toggle-wrap {
+
+
+.toggle-wrap {
     display: flex;
     flex: 1;
     justify-content: flex-end;
-    margin-top: 6px;
+    align-items: center;
 }
+
+/* The switch - the box around the slider */
+.toggle-wrap .switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 22px;
+    margin-left: 10px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .toggle-wrap .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .toggle-wrap .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .toggle-wrap .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 2px;
+    background: var(--card-bg);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .toggle-wrap input:checked + .slider {
+    background: var(--toggle-bg);
+  }
+  
+  .toggle-wrap input:focus + .slider {
+    box-shadow: 0 0 1px var(--toggle-bg);
+  }
+  
+  .toggle-wrap input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  
+  /* Rounded sliders */
+  .toggle-wrap .slider.round {
+    border-radius: 20px;
+  }
+  
+  .toggle-wrap .slider.round:before {
+    border-radius: 50%;
+  }
