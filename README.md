@@ -8,7 +8,7 @@
 
 4. For the porpose of this challenge I decided to skip using css pre-processors because with the use of css3 built-in variables is good enough.
 
-5. Icons where converted to an icon-font to make it easier to use and update.
+5. Icons where converted at https://fontello.com/ to an icon-font to make it easier to use and update. Json config file is located at '/src/css/fonts/source'. Make use of this file for future updates.
 
 ## Responsive approach
 
@@ -16,13 +16,16 @@
 
 2. Minimal media-queries where used to expand external margins near the edge of mobile devices, and center titles for small devices.
 
-### HTML & CSS development
+3. Media queries breakpoints taken from https://devfacts.com/media-queries-breakpoints-2020/
+
+## HTML & CSS development
 
 1. Started base HTML5 layout
 2. Created base CSS3 styles
 3. Created CSS3 color variables from documentation
 4. Organized css files in content related files
 5. Tested the app in different browsers and emulated devices with Chrome DevTools
+
 
 
 # To clone this proyect 
