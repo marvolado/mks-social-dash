@@ -63,32 +63,16 @@
     right: 25px;
     top: 20px;
     cursor: pointer;
+    opacity: 0.7;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+}
+html[data-theme="dark"] .rsm-bg-white .close {
+    opacity: 1;
 }
 
-@media (min-width:640px){
-    
-}
-@media (min-width:980px){
-    .sm\:rsm-m-8{
-        margin:4rem 8rem
-    }
-    .md\:rsm-w-10\/12{
-        width:80%
-    }
-}
-@media (min-width:1280px){
-    .xl\:rsm-w-1\/2{
-        width:50%
-    }
-}
-@media (max-width: 768px) {
-    .ms-custom-modal .statistics .col {
-        flex: 1 1!important;
-    }
-}
-/* .rsm-shadow-lg{
-    box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)
-} */
 
 .ms-custom-modal > div {
     flex-direction: column;
@@ -96,7 +80,7 @@
 .ms-custom-modal .title-wrap {
     flex-direction: column;
     flex: 0;
-    padding: 2.5em 3em 0;
+    padding: 2.5em 4em 0;
 }
 
 .ms-custom-modal .title-wrap h3 {
@@ -121,7 +105,7 @@
 .ms-custom-modal .statistics {
     flex: 0;
     display: flex;
-    margin: 2em 3em 1em;
+    margin: 2em 4em 1em;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -134,8 +118,14 @@
 .ms-custom-modal .statistics strong {
     font-size: 3em;
 }
+.ms-custom-modal .statistics .col:first-child strong {
+    opacity: 0.7;
+}
+html[data-theme="dark"] .ms-custom-modal .statistics strong {
+    opacity: 1!important;
+}
 .ms-custom-modal .statistics strong.lime {
-    color: var(--lime-green);
+    color: var(--lime-green-b);
 }
 .ms-custom-modal .statistics strong.lime i {
     display: inline-block;
@@ -143,12 +133,16 @@
     margin-right: 0;
 }
 .ms-custom-modal .statistics strong.lime .icon-up:before {
-    color: var(--lime-green);
+    color: var(--lime-green-b);
     font-size: 0.4em;
 }
 .ms-custom-modal .statistics span {
     margin: 0 3em 0 1.2em;
     font-size: 1.1em;
+    opacity: 0.7;
+}
+html[data-theme="dark"] .ms-custom-modal .statistics span {
+    opacity: 1;
 }
 .ms-custom-modal .statistics span:last-child {
     margin-right: 0;
@@ -157,7 +151,7 @@
     background: var(--card-bg)
 }
 .ms-custom-modal .graph .gutter {
-    padding: 1.5em 2em;
+    padding: 1.5em 3em;
     display: flex;
     flex-direction: column;
 }

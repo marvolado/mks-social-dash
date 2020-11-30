@@ -31,10 +31,6 @@ const App = () => {
       <>
         <div className="container">
           <header>
-            <div className="title-wrap">
-              <h1>Social Media Dashboard</h1>
-              <h3>Total Followers: 23,004</h3>
-            </div>
             <div className="toggle-wrap">
               Dark Mode <label className="switch">
                 <input type="checkbox"
@@ -43,6 +39,10 @@ const App = () => {
                 />
                 <span className="slider round"></span>
               </label>
+            </div>
+            <div className="title-wrap">
+              <h1>Social Media Dashboard</h1>
+              <h3>Total Followers: 23,004</h3>
             </div>
           </header>
           <main>
@@ -188,7 +188,7 @@ const App = () => {
         transition={ModalTransition.BOTTOM_UP}
         modalClassName="ms-custom-modal"
       >
-        <a className="close" onClick={closeModal}>X</a>
+        <button className="close" onClick={closeModal}>X</button>
         <FacebookModal></FacebookModal>
       </Modal>
     </ModalProvider>

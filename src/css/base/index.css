@@ -6,11 +6,6 @@ body, h1, h2, h3, h4, h5, p {
     margin: 0;
     padding: 0;
 }
-html, body, div, header, section {
-    display: flex;
-    flex: 1;
-}
-
 body {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
@@ -18,6 +13,11 @@ body {
     background: var(--background);
     background-color: var(--background-color);
     margin: 40px 0;
+}
+header {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
 }
 .container {
     flex-direction: column;
